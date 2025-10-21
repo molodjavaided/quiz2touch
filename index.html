@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>quiz</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <form id="quizForm">
+
+                <div class="title-icon-form">
+                    <div class="title-icon-form__svg">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.7275 0C17.1986 -9.26613e-05 17.6566 1.92348e-05 18.0342 0.0507812C18.4597 0.108032 18.9453 0.247276 19.3486 0.650391C19.7521 1.05388 19.892 1.5401 19.9492 1.96582C20 2.3434 20.0001 2.80141 20 3.27246V4.50488C20.0001 4.97602 20 5.43387 19.9492 5.81152C19.892 6.2373 19.7522 6.72338 19.3486 7.12695C18.9452 7.53024 18.4598 7.67029 18.0342 7.72754C17.6566 7.7783 17.1986 7.77744 16.7275 7.77734H13.7939L7.77734 13.7939V16.7275C7.77744 17.1986 7.7783 17.6566 7.72754 18.0342C7.67029 18.4598 7.53024 18.9452 7.12695 19.3486C6.72338 19.7522 6.2373 19.892 5.81152 19.9492C5.43387 20 4.97602 20.0001 4.50488 20H3.27246C2.80141 20.0001 2.3434 20 1.96582 19.9492C1.5401 19.892 1.05388 19.7521 0.650391 19.3486C0.247276 18.9453 0.108032 18.4597 0.0507812 18.0342C1.9277e-05 17.6566 -9.27024e-05 17.1986 0 16.7275V15.4951C-9.26843e-05 15.024 2.47175e-05 14.5661 0.0507812 14.1885C0.108016 13.7628 0.246988 13.2766 0.650391 12.873C1.0539 12.4695 1.54009 12.3297 1.96582 12.2725C2.3434 12.2217 2.80141 12.2226 3.27246 12.2227H6.20605L12.2227 6.20605V3.27246C12.2226 2.80141 12.2217 2.3434 12.2725 1.96582C12.3297 1.54009 12.4695 1.0539 12.873 0.650391C13.2766 0.246988 13.7628 0.108015 14.1885 0.0507812C14.5661 2.47729e-05 15.024 -9.27254e-05 15.4951 0H16.7275Z"
+                                fill="white" />
+                        </svg>
+                    </div>
+                    <div class="title-icon-form__vector">
+                        <svg width="29" height="8" viewBox="0 0 29 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M25.9286 0.0825165C24.4489 -0.222379 23.0805 0.346986 22.2151 1.38045C21.5593 2.16412 20.649 2.66983 19.6476 2.66983H9.35243C8.35097 2.66983 7.44066 2.16412 6.78486 1.38045C5.91954 0.346986 4.55111 -0.223604 3.07142 0.0825165C1.59527 0.387412 0.394941 1.61311 0.0871638 3.13759C-0.434873 5.72369 1.45914 8 3.8669 8C5.05303 8 6.11367 7.44655 6.82156 6.57472C7.45842 5.79105 8.39122 5.3294 9.38084 5.3294H19.6192C20.61 5.3294 21.5416 5.79105 22.1784 6.57472C22.8863 7.44532 23.947 8 25.1331 8C27.5409 8 29.4349 5.72369 28.9128 3.13759C28.6051 1.61311 27.4047 0.387412 25.9286 0.0825165Z"
+                                fill="#F6B715" />
+                        </svg>
+                    </div>
+                    <div class="title-icon-form__text">Бриф</div>
+                </div>
+
+                <section class="quiz-step quiz-step__start active" data-step="0">
+                    <div class="intro">
+                        <h2>Бриф по созданию веб-сайта</h2>
+                        <button type="button" class="button-start" id="startBtn">
+                            Начать
+                            <div class="round-arrow">
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.7964 0.930089L8.13802 4.27171C8.6245 4.75819 8.28002 5.59102 7.59155 5.59055L1.58413 5.59055C0.709121 5.59008 -0.000445208 6.29965 2.31702e-05 7.17466C0.00049159 8.04966 0.709589 8.75876 1.58413 8.75876L7.59108 8.75829C8.27956 8.75876 8.62403 9.59065 8.13755 10.0771L4.79593 13.4187C6.03322 14.656 8.03913 14.656 9.27689 13.4183L13.2817 9.4135C14.519 8.17621 14.5194 6.16982 13.2821 4.93253L9.27782 0.928213C8.04053 -0.309077 6.03415 -0.309545 4.7964 0.928214L4.7964 0.930089Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="intro-background">
+                        <svg width="1333" height="717" viewBox="0 0 1333 717" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_f_163_6717)">
+                                <ellipse cx="666.4" cy="358.4" rx="425" ry="117" fill="#525046" />
+                            </g>
+                            <defs>
+                                <filter id="filter0_f_163_6717" x="-9.15527e-05" y="0.000396729" width="1332.8"
+                                    height="716.8" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                    <feGaussianBlur stdDeviation="120.7" result="effect1_foregroundBlur_163_6717" />
+                                </filter>
+                            </defs>
+                        </svg>
+                    </div>
+
+                </section>
+
+                <section class="quiz-step quiz-step__general-info" data-step="1" hidden>
+                    <h2>Общая информация</h2>
+                    <div class="questions">
+                        <div class="question-group">
+                            <div class="question">Название Вашей компании</div>
+                            <input type="text" name="company_name" placeholder="Название компании" required>
+                        </div>
+                        <div class="question-group">
+                            <div class="question">Адрес</div>
+                            <input type="text" name="company_address" placeholder="Адрес" required>
+                        </div>
+                        <div class="question-group">
+                            <div class="question">Контактное лицо с Вашей стороны, с кем будут вестись все
+                                согласования:<br><span>ФИО,
+                                    должность,
+                                    телефоны,
+                                    e-mail
+                                </span></div>
+                            <input type="text" name="contact_person" placeholder="Контактное лицо" required>
+                        </div>
+                        <div class="question-group">
+                            <div class="question">Было ли приобретено Вами доменное имя для сайта?<br><span>(Если нет,
+                                    пожалуйста, выскажите свои пожела-ния, либо уже выбранный вариант)
+                                </span></div>
+                            <input type="text" name="domain_name" placeholder="Доменное имя для сайта" required>
+                        </div>
+                        <div class="question-group">
+                            <div class="question">Пользуетесь ли вы услугами хостинга?<br><span>
+                                    Если да, пожалуйста, укажите своего Хостинг- провайдера. Если нет, то наша компания
+                                    готова предоставить свои услуги,
+                                    подробности можете узнать у своего менеджера.
+                                </span>
+                            </div>
+                            <input type="text" name="hosting_provider" placeholder="Хостинг" required>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="quiz-step quiz-step__company-activity" data-step="2" hidden>
+                    <h2>Деятельность компании</h2>
+                    <div class="questions">
+                        <div class="question-group">
+                            <div class="question">Сфера деятельности Вашей компании</div>
+                            <input type="text" name="business_sphere" placeholder="Сфера деятельности" required>
+                        </div>
+                        <div class="question-group">
+                            <div class="question">Какие услуги (товары) предлагает Ваша компания?</div>
+                            <input type="text" name="product_services" placeholder="Услуги" required>
+                        </div>
+                        <div class="question-group">
+                            <div class="question">Позиция Вашей компании на рынке</div>
+                            <input type="text" name="market_position" placeholder="Позиция на рынке" required>
+                        </div>
+                        <div class="question-group">
+                            <div class="question">Информация об услугах (товарах):<br><span>Самое важное:
+                                    потребительские свойства,
+                                    конкурентные преимущества, уровень цен
+                                </span></div>
+                            <input type="text" name="product_details" placeholder="Услуги" required>
+                        </div>
+                        <div class="question-group">
+                            <div class="question">Карточка компании (реквизиты):<br><span>
+                                    Данная информация может потребоваться нам для регистрации хостинга и домена
+                                </span>
+                            </div>
+                            <input type="text" name="company_requisites" placeholder="Реквизиты" required>
+                        </div>
+                        <div class="question-group__buttons">
+                            <div class="question">Какие средства продвижения используете регулярно?</div>
+                            <div class="buttons-answers">
+                                <button type="button" class="button-answer" name="promotion_methods"
+                                    value="tv">Телереклама</button>
+                                <button type="button" class="button-answer" name="promotion_methods"
+                                    value="exhibitions">Выставки</button>
+                                <button type="button" class="button-answer" name="promotion_methods"
+                                    value="internet">Интернет</button>
+                                <button type="button" class="button-answer" name="promotion_methods"
+                                    value="direct_sales">Прямые
+                                    продажи</button>
+                                <button type="button" class="button-answer" name="promotion_methods"
+                                    value="radio">Радиореклама</button>
+                                <button type="button" class="button-answer button-answer__last" name="promotion"
+                                    value="other">Другое: совещания,
+                                    конференции, соцсети и
+                                    т.д.</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="quiz-step quiz-step__corporate-identity" data-step="3" hidden>
+                    <h2>Фирменный стиль
+                    </h2>
+                    <div class="questions">
+                        <div class="question-group">
+                            <div class="question">Есть ли у Вас готовый брендбук?<br><span>Если да, пожалуйста,
+                                    приложите его к брифу.</span></div>
+                            <input type="text" name="brandbook" placeholder="Брендбук" required>
+                        </div>
+                        <div class="question-group__buttons">
+                            <div class="question">При отсутствии брендбука, укажите какие элементы фирменного стиля у
+                                Вас имеются.<br><span>Пожалуйста, приложите элементы фирменного стиля к брифу с
+                                    описанием требований.</span>
+                            </div>
+                            <div class="buttons-answers buttons-answers__corporate-identity">
+                                <button type="button" class="button-answer" name="brand_elements"
+                                    value="logo">Логотип</button>
+                                <button type="button" class="button-answer" name="brand_elements"
+                                    value="business_cards">Визитные карточи</button>
+                                <button type="button" class="button-answer" name="brand_elements"
+                                    value="brochures">Рекламные
+                                    буклеты</button>
+                                <button type="button" class="button-answer" name="brand_elements"
+                                    value="external_ads">Наружная реклама</button>
+                                <button type="button" class="button-answer" name="brand_elements"
+                                    value="writing">Написание</button>
+                                <button type="button" class="button-answer" name="brand_elements"
+                                    value="letterhead">Фирменный
+                                    бланк</button>
+                                <button type="button" class="button-answer" name="brand_elements"
+                                    value="character">Персонаж</button>
+                                <button type="button" class="button-answer" name="brand_elements"
+                                    value="branded_clothing">Фирменная
+                                    одежда</button>
+                                <button type="button" class="button-answer" name="brand_elements"
+                                    value="other">Другое</button>
+                            </div>
+                        </div>
+                        <div class="question-group">
+                            <div class="question">Есть ли у Вас слоганы? Укажите.</div>
+                            <input type="text" name="slogans" placeholder="Слоган" required>
+                        </div>
+                        <div class="question-group">
+                            <div class="question">Необходимо ли следовать концепциям имеющихся рекламных материалов?
+                            </div>
+                            <input type="text" name="follow_concepts" placeholder="Требования к концепциям" required>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="quiz-step quiz-step__goals" data-step="4" hidden>
+                    <h2>Цели создания сайта
+                    </h2>
+                    <div class="questions">
+                        <div class="question-group">
+                            <div class="question">Это ваш первый сайт?<br><span>Если нет, то укажите адреса всех ваших
+                                    Интернет-ресурсов.</span></div>
+                            <input type="text" name="existing_sites" placeholder="Адрес сайта" required>
+                        </div>
+                        <div class="question-group__buttons">
+                            <div class="question">Цель разработки сайта?
+                            </div>
+                            <div class="buttons-answers buttons-answers__corporate-identity">
+                                <button type="button" class="button-answer" name="development_goals"
+                                    value="informing">Информирование целевой аудитории</button>
+                                <button type="button" class="button-answer" name="development_goals"
+                                    value="brand_promotion">Продвижение Бренда</button>
+                                <button type="button" class="button-answer" name="development_goals"
+                                    value="product_promotion">Продвижение продукции</button>
+                                <button type="button" class="button-answer" name="development_goals"
+                                    value="sales_stimulation">Стимулирования продаж</button>
+                                <button type="button" class="button-answer" name="development_goals"
+                                    value="feedback">Создание каналов обратной связи</button>
+                                <button type="button" class="button-answer" name="development_goals"
+                                    value="commerce_mechanisms">Создание базовых механизмов реализации товаров через
+                                    Интернет</button>
+                                <button type="button" class="button-answer" name="development_goals"
+                                    value="direct_sales">Непосредственные продажи через Интернет</button>
+                                <button type="button" class="button-answer" name="development_goals"
+                                    value="other">Другое</button>
+                            </div>
+                        </div>
+                        <div class="question-group">
+                            <div class="question">Целевая аудитория сайта:<br><span>Потенциальные клиенты, партнеры по
+                                    бизнесу, поставщики товаров и услуг, инвесторы, эксперты и т.п.
+                                </span></div>
+                            <input type="text" name="target_audience" placeholder="Целевая аудитория" required>
+                        </div>
+
+                        <div class="question-group__buttons">
+                            <div class="question">
+                                География, на которую ориентирован сайт:
+                            </div>
+
+                            <div class="buttons-answers">
+                                <button type="button" class="button-answer" name="geography" value="city">Город</button>
+                                <button type="button" class="button-answer" name="geography"
+                                    value="region">Область</button>
+                                <button type="button" class="button-answer" name="geography"
+                                    value="country">Россия</button>
+                                <button type="button" class="button-answer" name="geography" value="cis">СНГ</button>
+                                <button type="button" class="button-answer" name="geography" value="other">Другое:
+                                    Мир</button>
+                            </div>
+                        </div>
+
+                        <div class="question-group__buttons">
+                            <div class="question">
+                                Какие дополнительные области по Вашему мнению необходимо предусмотреть в дизайне?
+                            </div>
+
+                            <div class="buttons-answers">
+                                <button type="button" class="button-answer" name="additional_areas"
+                                    value="banners">Баннеры</button>
+                                <button type="button" class="button-answer" name="additional_areas"
+                                    value="contextual_ads">Контекстная реклама</button>
+                                <button type="button" class="button-answer" name="additional_areas"
+                                    value="counters">Счетчики</button>
+                                <button type="button" class="button-answer" name="additional_areas"
+                                    value="partners_logos">Логотипы партнеров</button>
+                                <button type="button" class="button-answer" name="additional_areas"
+                                    value="other">Другое:</button>
+                            </div>
+                        </div>
+
+                        <div class="question-group">
+                            <div class="question">Нужны ли Вам версии сайта на иностранных языках?
+                            </div>
+                            <input type="text" name="foreign_versions" placeholder="" required>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="quiz-step quiz-step__general-info" data-step="5" hidden>
+                    <h2>Анализ конкурентов</h2>
+                    <div class="questions">
+                        <div class="question-group">
+                            <div class="question">Пожалуйста, укажите Ваших основных конкурентов с указанием их
+                                Интернет-ресурсов.
+                            </div>
+                            <input type="text" name="main_competitors" placeholder="Конкуренты и их сайты" required>
+                        </div>
+                        <div class="question-group">
+                            <div class="question">Кого из конкурентов Вы считаете наиболее сильным?<br><span>1-2
+                                    конкурента по рынку</span></div>
+                            <input type="text" name="strong_competitors" placeholder="Сильные конкуренты" required>
+                        </div>
+                        <div class="question-group">
+                            <div class="question">Каковы Ваши конкурентные преимущества?</div>
+                            <input type="text" name="competitive_advantages" placeholder="Конкурентные преимущества"
+                                required>
+                        </div>
+                        <div class="question-group">
+                            <div class="question">Укажите положительные стороны Интернет-ресурсов Ваших конкурентов,
+                                оригинальные и понравившиеся вам решения в плане
+                                функциональности и дизайна.</div>
+                            <input type="text" name="competitors_positive" placeholder="Положительные стороны" required>
+                        </div>
+                        <div class="question-group">
+                            <div class="question">Укажите отрицательные стороны Интернет-ресурсов Ваших конкурентов в
+                                плане функциональности и дизайна.
+                            </div>
+                            <input type="text" name="competitors_negative" placeholder="Отрицательные стороны" required>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="quiz-step quiz-step__general-info" data-step="6" hidden>
+                    <h2>Концепция дизайна сайта
+                    </h2>
+                    <div class="questions">
+                        <div class="question-group">
+                            <div class="question">Согласны ли Вы заказать разработку концепции дизайна?
+                            </div>
+                            <input type="text" name="design_concept" placeholder="Ответ" required>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="quiz-step quiz-step__general-info" data-step="7" hidden>
+                    <h2>Контент сайта</h2>
+                    <div class="questions">
+                        <div class="question-group">
+                            <div class="question-group__buttons">
+                                <div class="question">Какую информацию вы хотите разместить на сайте?
+                                </div>
+                                <div class="buttons-answers buttons-answers__corporate-identity">
+                                    <button type="button" class="button-answer" name="site_content"
+                                        value="about_company">О
+                                        компании
+                                    </button>
+                                    <button type="button" class="button-answer" name="site_content"
+                                        value="vacancies">Вакансии</button>
+                                    <button type="button" class="button-answer" name="site_content"
+                                        value="partners">Партнеры, клиенты компании
+                                    </button>
+                                    <button type="button" class="button-answer" name="site_content"
+                                        value="certificates">Сертификаты, лицензии
+                                    </button>
+                                    <button type="button" class="button-answer" name="site_content"
+                                        value="services_list">Список услуг
+                                    </button>
+                                    <button type="button" class="button-answer" name="site_content"
+                                        value="geography">География продаж, дилерская сеть</button>
+                                    <button type="button" class="button-answer" name="site_content"
+                                        value="contacts">Контактная информация
+                                    </button>
+                                    <button type="button" class="button-answer" name="site_content"
+                                        value="portfolio">Портфолио</button>
+                                    <button type="button" class="button-answer" name="site_content"
+                                        value="catalog">Каталог продукции, услуг, товаров
+                                    </button>
+                                    <button type="button" class="button-answer" name="site_content"
+                                        value="buyers_info">Информация покупателям</button>
+                                    <button type="button" class="button-answer" name="site_content"
+                                        value="investors_info">Информация инвесторам</button>
+                                    <button type="button" class="button-answer" name="site_content"
+                                        value="partners_info">Информация партнерам и т.п.</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question-group">
+                            <div class="question">Была ли подготовлена информация для заполнения проекта?<br><span>Если
+                                    данная информация подготовлена, желательно ее предоставить</span></div>
+                            <input type="text" name="preparation_info" placeholder="Ответ" required>
+                            <!-- Добавить закреп для файла? -->
+                        </div>
+                        <div class="question-group">
+                            <div class="question">Планируете ли Вы заказать подготовку заполнения для Вашего сайта?
+                            </div>
+                            <input type="text" name="content_preparation" placeholder="Ответ" required>
+                        </div>
+                        <div class="question-group">
+                            <div class="question">Планируется ли выделение штатной единицы для дальнейшего заполнения
+                                сайта?
+                            </div>
+                            <input type="text" name="staff_unit" placeholder="Ответ" required>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="quiz-step quiz-step__general-info" data-step="8" hidden>
+                    <h2>Проектная группа</h2>
+                    <div class="questions">
+                        <div class="question-group">
+                            <div class="question">Деятельность каких подразделений затрагивает разрабатываемый проект?
+                            </div>
+                            <input type="text" name="affected_departments" placeholder="Подразделения" required>
+                        </div>
+                        <div class="question-group">
+                            <div class="question">Кто из сотрудников компании будет ответственным за реализацию проекта?
+                            </div>
+                            <input type="text" name="project_manager" placeholder="Ответственное лицо" required>
+                        </div>
+                        <div class="question-group">
+                            <div class="question">Кто из сотрудников компании планируется для работы в проектной группе?
+                            </div>
+                            <input type="text" name="project_team_members" placeholder="Участники проекта" required>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="quiz-step quiz-step__choose_style" data-step="9" hidden>
+                    <h2>Выбери стиль:
+                    </h2>
+                    <div class="questions">
+                        <div class="question-group__buttons">
+                            <div class="buttons-answers buttons-answers__style-site">
+                                <button type="button" class="button-answer" name="style-site" value="minimalism"
+                                    data-style-id="1">Минимализм</button>
+                                <button type="button" class="button-answer" name="style-site"
+                                    value="brutalism-non-brutalism" data-style-id="2">Брутализм и
+                                    необрутализм</button>
+                                <button type="button" class="button-answer" name="style-site" value="constructivism"
+                                    data-style-id="3">Конструктивизм</button>
+                            </div>
+                            <div class="buttons-answers buttons-answers__style-site">
+                                <button type="button" class="button-answer" name="style-site" value="swiss"
+                                    data-style-id="4">Швейцарский</button>
+                                <button type="button" class="button-answer" name="style-site" value="journal"
+                                    data-style-id="5">Журнальный</button>
+                                <button type="button" class="button-answer" name="style-site" value="hand-drawn"
+                                    data-style-id="6">Рисованный</button>
+                                <button type="button" class="button-answer" name="style-site" value="neoclassical"
+                                    data-style-id="7">Неоклассический</button>
+                            </div>
+
+                            <div class="buttons-answers buttons-answers__style-site">
+                                <button type="button" class="button-answer" name="style-site" value="retro"
+                                    data-style-id="8">Ретро</button>
+                                <button type="button" class="button-answer" name="style-site" value="flat"
+                                    data-style-id="9">Флэт</button>
+                                <button type="button" class="button-answer" name="style-site" value="bento"
+                                    data-style-id="10">Бенто</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="quiz-step quiz-step__style-examples" data-step="10" hidden>
+                    <h2><span id="selected-style-name"></span>
+                    </h2>
+                    <div class="style-examples-subtitle">Нажми на картинку для открытия
+                        в режиме просмотра</div>
+                    <div class="style-examples-container">
+                        <div class="style-example">
+                            <div class="example-image" id="example-image-1">
+                                <!-- Картинка будет загружена через JavaScript -->
+                                <div class="image-placeholder">Загрузка...</div>
+                            </div>
+                        </div>
+                        <div class="style-example">
+                            <div class="example-image" id="example-image-2">
+                                <div class="image-placeholder">Загрузка...</div>
+                            </div>
+                        </div>
+                        <div class="style-example">
+                            <div class="example-image" id="example-image-3">
+                                <div class="image-placeholder">Загрузка...</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="quiz-step quiz-step__end" data-step="11" hidden>
+                    <img src="./image/end.png" alt="end">
+
+                </section>
+
+                <div class="buttons-from__footer">
+                    <button type="button" id="backToStyleBtn" class="button-round-arrow button-round-arrow-back" hidden>
+                        <div class="round-arrow">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.41259 0.930089L6.07097 4.27171C5.58449 4.75819 5.92896 5.59102 6.61744 5.59055L12.6249 5.59055C13.4999 5.59008 14.2094 6.29965 14.209 7.17466C14.2085 8.04966 13.4994 8.75876 12.6249 8.75876L6.6179 8.75829C5.92943 8.75876 5.58496 9.59065 6.07144 10.0771L9.41306 13.4187C8.17577 14.656 6.16986 14.656 4.9321 13.4183L0.927308 9.4135C-0.309982 8.17621 -0.310449 6.16982 0.926841 4.93253L4.93116 0.928213C6.16845 -0.309077 8.17483 -0.309545 9.41259 0.928214L9.41259 0.930089Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                        Назад к выбору стиля
+                    </button>
+                    <button type="button" id="showStyleBtn" class="button-round-arrow" hidden>
+                        Посмотреть примеры стиля
+                        <div class="round-arrow">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4.7964 0.930089L8.13802 4.27171C8.6245 4.75819 8.28002 5.59102 7.59155 5.59055L1.58413 5.59055C0.709121 5.59008 -0.000445208 6.29965 2.31702e-05 7.17466C0.00049159 8.04966 0.709589 8.75876 1.58413 8.75876L7.59108 8.75829C8.27956 8.75876 8.62403 9.59065 8.13755 10.0771L4.79593 13.4187C6.03322 14.656 8.03913 14.656 9.27689 13.4183L13.2817 9.4135C14.519 8.17621 14.5194 6.16982 13.2821 4.93253L9.27782 0.928213C8.04053 -0.309077 6.03415 -0.309545 4.7964 0.928214L4.7964 0.930089Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                    </button>
+                    <button type="button" id="nextBtn" class="button-round-arrow" hidden>
+                        Далее
+                        <div class="round-arrow">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4.7964 0.930089L8.13802 4.27171C8.6245 4.75819 8.28002 5.59102 7.59155 5.59055L1.58413 5.59055C0.709121 5.59008 -0.000445208 6.29965 2.31702e-05 7.17466C0.00049159 8.04966 0.709589 8.75876 1.58413 8.75876L7.59108 8.75829C8.27956 8.75876 8.62403 9.59065 8.13755 10.0771L4.79593 13.4187C6.03322 14.656 8.03913 14.656 9.27689 13.4183L13.2817 9.4135C14.519 8.17621 14.5194 6.16982 13.2821 4.93253L9.27782 0.928213C8.04053 -0.309077 6.03415 -0.309545 4.7964 0.928214L4.7964 0.930089Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+
+
+
+
+                <!-- <div class="questions-counter" aria-live="polite">5/39 вопросов</div> -->
+            </form>
+        </div>
+
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
