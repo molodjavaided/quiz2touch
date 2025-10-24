@@ -65,7 +65,218 @@
 
                 </section>
 
-                <section class="quiz-step quiz-step__general-info" data-step="1" hidden>
+                <section class="quiz-step quiz-step__choose_style" data-step="1" hidden>
+                    <h2>Выбери стиль:
+                    </h2>
+                    <div class="questions">
+                        <div class="question-group__buttons">
+                            <div class="buttons-answers buttons-answers__style-site">
+                                <button type="button" class="button-answer" name="style-site" value="minimalism"
+                                    data-style-id="1">Минимализм</button>
+                                <button type="button" class="button-answer" name="style-site"
+                                    value="brutalism-non-brutalism" data-style-id="2">Брутализм и
+                                    необрутализм</button>
+                                <button type="button" class="button-answer" name="style-site" value="constructivism"
+                                    data-style-id="3">Конструктивизм</button>
+                            </div>
+                            <div class="buttons-answers buttons-answers__style-site">
+                                <button type="button" class="button-answer" name="style-site" value="swiss"
+                                    data-style-id="4">Швейцарский</button>
+                                <button type="button" class="button-answer" name="style-site" value="journal"
+                                    data-style-id="5">Журнальный</button>
+                                <button type="button" class="button-answer" name="style-site" value="hand-drawn"
+                                    data-style-id="6">Рисованный</button>
+                                <button type="button" class="button-answer" name="style-site" value="neoclassical"
+                                    data-style-id="7">Неоклассический</button>
+                            </div>
+
+                            <div class="buttons-answers buttons-answers__style-site">
+                                <button type="button" class="button-answer" name="style-site" value="retro"
+                                    data-style-id="8">Ретро</button>
+                                <button type="button" class="button-answer" name="style-site" value="flat"
+                                    data-style-id="9">Флэт</button>
+                                <button type="button" class="button-answer" name="style-site" value="bento"
+                                    data-style-id="10">Бенто</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="quiz-step quiz-step__style-examples" data-step="2" hidden>
+                    <h2><span id="selected-style-name"></span>
+                    </h2>
+                    <div class="style-examples-subtitle">Нажми на картинку для открытия
+                        в режиме просмотра</div>
+                    <div class="style-examples-container">
+                        <div class="style-example" data-style-id="1">
+                            <div class="example-image">
+                                <!-- Картинка будет загружена через JS -->
+                                <!-- <div class="image-placeholder">Загрузка...</div> -->
+
+                                <!-- Картинка будет загружена в html -->
+                                <img src="./image/style-example/miimalism/end.png" alt="Минимализм пример 1">
+                            </div>
+                        </div>
+                        <div class="style-example" data-style-id="1">
+                            <div class="example-image">
+                                <div class="example-image">
+                                    <img src="./image/style-example/miimalism/end.png" alt="Минимализм пример 2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="style-example" data-style-id="1">
+                            <div class="example-image">
+                                <img src="./image/style-example/miimalism/end.png" alt="Минимализм пример 3">
+                            </div>
+                        </div>
+
+                        <div class="style-example" data-style-id="2">
+                            <div class="example-image">
+                                <img src="./image/style-example/brutalism/end.png" alt="Брутализм пример 1">
+                            </div>
+                        </div>
+                        <div class="style-example" data-style-id="2">
+                            <div class="example-image">
+                                <img src="./image/style-example/brutalism/end.png" alt="Брутализм пример 2">
+                            </div>
+                        </div>
+                        <div class="style-example" data-style-id="2">
+                            <div class="example-image">
+                                <img src="./image/style-example/brutalism/end.png" alt="Брутализм пример 3">
+                            </div>
+                        </div>
+
+                        <div class="style-example" data-style-id="3">
+                            <div class="example-image">
+                                <img src="./image/style-example/constructivism/end.png" alt="Конструктивизм пример 1">
+                            </div>
+                        </div>
+                        <div class="style-example" data-style-id="3">
+                            <div class="example-image">
+                                <img src="./image/style-example/constructivism/end.png" alt="Конструктивизм пример 2">
+                            </div>
+                        </div>
+                        <div class="style-example" data-style-id="3">
+                            <div class="example-image">
+                                <img src="./image/style-example/constructivism/end.png" alt="Конструктивизм пример 3">
+                            </div>
+                        </div>
+
+                        <div class="style-example" data-style-id="4">
+                            <div class="example-image">
+                                <img src="./image/style-example/swiss/end.png" alt="Швейцарский пример 1">
+                            </div>
+                        </div>
+                        <div class="style-example" data-style-id="4">
+                            <div class="example-image">
+                                <img src="./image/style-example/swiss/end.png" alt="Швейцарский пример 2">
+                            </div>
+                        </div>
+                        <div class="style-example" data-style-id="4">
+                            <div class="example-image">
+                                <img src="./image/style-example/swiss/end.png" alt="Швейцарский пример 3">
+                            </div>
+                        </div>
+
+                        <div class="style-example" data-style-id="5">
+                            <div class="example-image">
+                                <img src="./image/style-example/journal/end.png" alt="Журнальный пример 1">
+                            </div>
+                        </div>
+                        <div class="style-example" data-style-id="5">
+                            <div class="example-image">
+                                <img src="./image/style-example/journal/end.png" alt="Журнальный пример 2">
+                            </div>
+                        </div>
+                        <div class="style-example" data-style-id="5">
+                            <div class="example-image">
+                                <img src="./image/style-example/journal/end.png" alt="Журнальный пример 3">
+                            </div>
+                        </div>
+
+                        <div class="style-example" data-style-id="6">
+                            <div class="example-image">
+                                <img src="./image/style-example/hand-drawn/end.png" alt="Рисованный пример 1">
+                            </div>
+                        </div>
+                        <div class="style-example" data-style-id="6">
+                            <div class="example-image">
+                                <img src="./image/style-example/hand-drawn/end.png" alt="Рисованный пример 2">
+                            </div>
+                        </div>
+                        <div class="style-example" data-style-id="6">
+                            <div class="example-image">
+                                <img src="./image/style-example/hand-drawn/end.png" alt="Рисованный пример 3">
+                            </div>
+                        </div>
+
+                        <div class="style-example" data-style-id="7">
+                            <div class="example-image">
+                                <img src="./image/style-example/neoclassical/end.png" alt="Неоклассический пример 1">
+                            </div>
+                        </div>
+                        <div class="style-example" data-style-id="7">
+                            <div class="example-image">
+                                <img src="./image/style-example/neoclassical/end.png" alt="Неоклассический пример 2">
+                            </div>
+                        </div>
+                        <div class="style-example" data-style-id="7">
+                            <div class="example-image">
+                                <img src="./image/style-example/neoclassical/end.png" alt="Неоклассический пример 3">
+                            </div>
+                        </div>
+
+                        <div class="style-example" data-style-id="8">
+                            <div class="example-image">
+                                <img src="./image/style-example/retro/end.png" alt="Ретро пример 1">
+                            </div>
+                        </div>
+                        <div class="style-example" data-style-id="8">
+                            <div class="example-image">
+                                <img src="./image/style-example/retro/end.png" alt="Ретро пример 2">
+                            </div>
+                        </div>
+                        <div class="style-example" data-style-id="8">
+                            <div class="example-image">
+                                <img src="./image/style-example/retro/end.png" alt="Ретро пример 3">
+                            </div>
+                        </div>
+
+                        <div class="style-example" data-style-id="9">
+                            <div class="example-image">
+                                <img src="./image/style-example/flat/end.png" alt="Флэт пример 1">
+                            </div>
+                        </div>
+                        <div class="style-example" data-style-id="9">
+                            <div class="example-image">
+                                <img src="./image/style-example/flat/end.png" alt="Флэт пример 2">
+                            </div>
+                        </div>
+                        <div class="style-example" data-style-id="9">
+                            <div class="example-image">
+                                <img src="./image/style-example/flat/end.png" alt="Флэт пример 3">
+                            </div>
+                        </div>
+
+                        <div class="style-example" data-style-id="10">
+                            <div class="example-image">
+                                <img src="./image/style-example/bento/end.png" alt="Бенто пример 1">
+                            </div>
+                        </div>
+                        <div class="style-example" data-style-id="10">
+                            <div class="example-image">
+                                <img src="./image/style-example/bento/end.png" alt="Бенто пример 2">
+                            </div>
+                        </div>
+                        <div class="style-example" data-style-id="10">
+                            <div class="example-image">
+                                <img src="./image/style-example/bento/end.png" alt="Бенто пример 3">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="quiz-step quiz-step__general-info" data-step="3" hidden>
                     <h2>Общая информация</h2>
                     <div class="questions">
                         <div class="question-group">
@@ -104,7 +315,7 @@
 
                 </section>
 
-                <section class="quiz-step quiz-step__company-activity" data-step="2" hidden>
+                <section class="quiz-step quiz-step__company-activity" data-step="4" hidden>
                     <h2>Деятельность компании</h2>
                     <div class="questions">
                         <div class="question-group">
@@ -157,7 +368,7 @@
 
                 </section>
 
-                <section class="quiz-step quiz-step__corporate-identity" data-step="3" hidden>
+                <section class="quiz-step quiz-step__corporate-identity" data-step="5" hidden>
                     <h2>Фирменный стиль
                     </h2>
                     <div class="questions">
@@ -180,7 +391,8 @@
                                     value="brochures">Рекламные
                                     буклеты</button>
                                 <button type="button" class="button-answer" name="brand_elements"
-                                    value="external_ads">Наружная реклама</button>
+                                    value="external_ads">Наружная
+                                    реклама</button>
                                 <button type="button" class="button-answer" name="brand_elements"
                                     value="writing">Написание</button>
                                 <button type="button" class="button-answer" name="brand_elements"
@@ -208,7 +420,7 @@
 
                 </section>
 
-                <section class="quiz-step quiz-step__goals" data-step="4" hidden>
+                <section class="quiz-step quiz-step__goals" data-step="6" hidden>
                     <h2>Цели создания сайта
                     </h2>
                     <div class="questions">
@@ -230,7 +442,8 @@
                                 <button type="button" class="button-answer" name="development_goals"
                                     value="sales_stimulation">Стимулирования продаж</button>
                                 <button type="button" class="button-answer" name="development_goals"
-                                    value="feedback">Создание каналов обратной связи</button>
+                                    value="feedback">Создание
+                                    каналов обратной связи</button>
                                 <button type="button" class="button-answer" name="development_goals"
                                     value="commerce_mechanisms">Создание базовых механизмов реализации товаров через
                                     Интернет</button>
@@ -292,7 +505,7 @@
 
                 </section>
 
-                <section class="quiz-step quiz-step__general-info" data-step="5" hidden>
+                <section class="quiz-step quiz-step__general-info" data-step="7" hidden>
                     <h2>Анализ конкурентов</h2>
                     <div class="questions">
                         <div class="question-group">
@@ -327,7 +540,7 @@
 
                 </section>
 
-                <section class="quiz-step quiz-step__general-info" data-step="6" hidden>
+                <section class="quiz-step quiz-step__general-info" data-step="8" hidden>
                     <h2>Концепция дизайна сайта
                     </h2>
                     <div class="questions">
@@ -340,7 +553,7 @@
 
                 </section>
 
-                <section class="quiz-step quiz-step__general-info" data-step="7" hidden>
+                <section class="quiz-step quiz-step__general-info" data-step="9" hidden>
                     <h2>Контент сайта</h2>
                     <div class="questions">
                         <div class="question-group">
@@ -355,23 +568,28 @@
                                     <button type="button" class="button-answer" name="site_content"
                                         value="vacancies">Вакансии</button>
                                     <button type="button" class="button-answer" name="site_content"
-                                        value="partners">Партнеры, клиенты компании
+                                        value="partners">Партнеры,
+                                        клиенты компании
                                     </button>
                                     <button type="button" class="button-answer" name="site_content"
                                         value="certificates">Сертификаты, лицензии
                                     </button>
                                     <button type="button" class="button-answer" name="site_content"
-                                        value="services_list">Список услуг
+                                        value="services_list">Список
+                                        услуг
                                     </button>
                                     <button type="button" class="button-answer" name="site_content"
-                                        value="geography">География продаж, дилерская сеть</button>
+                                        value="geography">География
+                                        продаж, дилерская сеть</button>
                                     <button type="button" class="button-answer" name="site_content"
-                                        value="contacts">Контактная информация
+                                        value="contacts">Контактная
+                                        информация
                                     </button>
                                     <button type="button" class="button-answer" name="site_content"
                                         value="portfolio">Портфолио</button>
                                     <button type="button" class="button-answer" name="site_content"
-                                        value="catalog">Каталог продукции, услуг, товаров
+                                        value="catalog">Каталог
+                                        продукции, услуг, товаров
                                     </button>
                                     <button type="button" class="button-answer" name="site_content"
                                         value="buyers_info">Информация покупателям</button>
@@ -403,7 +621,7 @@
 
                 </section>
 
-                <section class="quiz-step quiz-step__general-info" data-step="8" hidden>
+                <section class="quiz-step quiz-step__general-info" data-step="10" hidden>
                     <h2>Проектная группа</h2>
                     <div class="questions">
                         <div class="question-group">
@@ -425,74 +643,29 @@
 
                 </section>
 
-                <section class="quiz-step quiz-step__choose_style" data-step="9" hidden>
-                    <h2>Выбери стиль:
-                    </h2>
-                    <div class="questions">
-                        <div class="question-group__buttons">
-                            <div class="buttons-answers buttons-answers__style-site">
-                                <button type="button" class="button-answer" name="style-site" value="minimalism"
-                                    data-style-id="1">Минимализм</button>
-                                <button type="button" class="button-answer" name="style-site"
-                                    value="brutalism-non-brutalism" data-style-id="2">Брутализм и
-                                    необрутализм</button>
-                                <button type="button" class="button-answer" name="style-site" value="constructivism"
-                                    data-style-id="3">Конструктивизм</button>
-                            </div>
-                            <div class="buttons-answers buttons-answers__style-site">
-                                <button type="button" class="button-answer" name="style-site" value="swiss"
-                                    data-style-id="4">Швейцарский</button>
-                                <button type="button" class="button-answer" name="style-site" value="journal"
-                                    data-style-id="5">Журнальный</button>
-                                <button type="button" class="button-answer" name="style-site" value="hand-drawn"
-                                    data-style-id="6">Рисованный</button>
-                                <button type="button" class="button-answer" name="style-site" value="neoclassical"
-                                    data-style-id="7">Неоклассический</button>
-                            </div>
-
-                            <div class="buttons-answers buttons-answers__style-site">
-                                <button type="button" class="button-answer" name="style-site" value="retro"
-                                    data-style-id="8">Ретро</button>
-                                <button type="button" class="button-answer" name="style-site" value="flat"
-                                    data-style-id="9">Флэт</button>
-                                <button type="button" class="button-answer" name="style-site" value="bento"
-                                    data-style-id="10">Бенто</button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="quiz-step quiz-step__style-examples" data-step="10" hidden>
-                    <h2><span id="selected-style-name"></span>
-                    </h2>
-                    <div class="style-examples-subtitle">Нажми на картинку для открытия
-                        в режиме просмотра</div>
-                    <div class="style-examples-container">
-                        <div class="style-example">
-                            <div class="example-image" id="example-image-1">
-                                <!-- Картинка будет загружена через JavaScript -->
-                                <div class="image-placeholder">Загрузка...</div>
-                            </div>
-                        </div>
-                        <div class="style-example">
-                            <div class="example-image" id="example-image-2">
-                                <div class="image-placeholder">Загрузка...</div>
-                            </div>
-                        </div>
-                        <div class="style-example">
-                            <div class="example-image" id="example-image-3">
-                                <div class="image-placeholder">Загрузка...</div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
                 <section class="quiz-step quiz-step__end" data-step="11" hidden>
                     <img src="./image/end.png" alt="end">
 
                 </section>
 
-                <div class="buttons-from__footer">
+                <div class="pagination-form">
+                    <div class="pagination-form__questions-counter">
+                        <span id="current-counter"></span>/<span id="total-counter"></span>Вопросов
+                    </div>
+                </div>
+
+                <div class="buttons-form__footer">
+                    <button type="button" id="prevBtn" class="button-round-arrow button-round-arrow-back" hidden>
+                        <div class="round-arrow">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.41259 0.930089L6.07097 4.27171C5.58449 4.75819 5.92896 5.59102 6.61744 5.59055L12.6249 5.59055C13.4999 5.59008 14.2094 6.29965 14.209 7.17466C14.2085 8.04966 13.4994 8.75876 12.6249 8.75876L6.6179 8.75829C5.92943 8.75876 5.58496 9.59065 6.07144 10.0771L9.41306 13.4187C8.17577 14.656 6.16986 14.656 4.9321 13.4183L0.927308 9.4135C-0.309982 8.17621 -0.310449 6.16982 0.926841 4.93253L4.93116 0.928213C6.16845 -0.309077 8.17483 -0.309545 9.41259 0.928214L9.41259 0.930089Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                        Назад
+                    </button>
                     <button type="button" id="backToStyleBtn" class="button-round-arrow button-round-arrow-back" hidden>
                         <div class="round-arrow">
                             <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
@@ -527,9 +700,6 @@
                         </div>
                     </button>
                 </div>
-
-
-
 
                 <!-- <div class="questions-counter" aria-live="polite">5/39 вопросов</div> -->
             </form>
