@@ -80,7 +80,10 @@ form {
     display: none;
 }
 
-/* первая секция */
+.hidden {
+    display: none !important;
+}
+
 .intro {
     position: relative;
     display: flex;

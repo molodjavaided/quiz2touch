@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const selectedStyleName = document.getElementById('selected-style-name');
     const buttonsFooter = document.querySelector('.buttons-form__footer');
     const prevBtn = document.getElementById('prevBtn');
+    const paginationForm = document.querySelector('.pagination-form');
     const currentCounterPagination = document.getElementById('current-counter');
     const totalCounterPagination = document.getElementById('total-counter');
 
@@ -66,10 +67,14 @@ document.addEventListener('DOMContentLoaded', function() {
             step.hidden = index !== stepIndex;
         });
 
+
+
         if (stepIndex === 0 || stepIndex === 11 ) {
             buttonsFooter.classList.add('hidden');
+            paginationForm.classList.add('hidden');
         } else {
             buttonsFooter.classList.remove('hidden');
+            paginationForm.classList.remove('hidden');
         }
 
         if (stepIndex === 0) {
@@ -101,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const counterFilledInputs = () => {
         let filledInputs = 0;
 
-        for (let i = 3; i <+ 10; i++) {
+        for (let i = 3; i <= 10; i++) {
             const step = document.querySelector(`.quiz-step[data-step="${i}"]`)
             if (step) {
                 const inputs = step.querySelectorAll('input[type="text"]');
@@ -155,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        totalInputs += allGroups.size + 1;
+        totalInputs += allGroups.size;
 
         return totalInputs
     }
@@ -184,34 +189,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // const styleExamplesCache = new Map();
-
-    // const loadStyleExamples = async (styleId) => {
-    //     if (styleExamplesCache.has(styleId)) {
-    //         return styleExamplesCache.get(styleId);
-    //     }
-
-    //     try {
-    //         const response = await fetch(`http://localhost:3001/styles/${styleId}`);
-    //         const data = await response.json();
-    //         const examples = data.images;
-    //         styleExamplesCache.set(styleId, examples);
-    //         return examples;
-    //     } catch (error) {
-    //         console.error('Ошибка загрузки примеров:', error);
-    //         return [];
-    //     }
-    // };
-
-    // const displayStyleExamples = (examples) => {
-    //     examples.forEach((exampleUrl, index) => {
-    //         const exampleElement = document.getElementById(`example-image-${index + 1}`);
-    //         if (exampleElement) {
-    //             exampleElement.innerHTML = `<img src="${exampleUrl}" alt="Пример стиля ${index + 1}" loading="lazy">`;
-    //         }
-    //     });
-    // }
-
     const showStyleExamples = (styleId) => {
     document.querySelectorAll('.style-example').forEach(example => {
          example.style.display = 'none';
@@ -222,13 +199,32 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 }
 
+    const submitFormData = async (formData) => {
+
+        try {
+            const response = await fetch('quiz.php', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                console.log(await response.text());
+                return true
+            } else {
+                console.error(response.status);
+                return false;
+
+            }
+        } catch (error) {
+            return false
+        }
+    }
+
     showStyleBtn.addEventListener('click', function() {
         if (selectedStyle) {
             selectedStyleName.textContent = selectedStyle.name;
             currentStep = 2;
             showStep(currentStep);
-            // const examples = loadStyleExamples(selectedStyle.id);
-            // displayStyleExamples(examples);
             showStyleExamples(selectedStyle.id)
         }
     });
@@ -259,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    nextBtn.addEventListener('click', () => {
+    nextBtn.addEventListener('click', async () => {
         const formData = new FormData(form);
         const inputs = form.querySelectorAll('input');
 
@@ -272,25 +268,30 @@ document.addEventListener('DOMContentLoaded', function() {
         collectMultipleChoiceData(formData);
 
         if (selectedStyle) {
-            formData.append('selected_style', selectedStyle.value);
             formData.append('selected_style_id', selectedStyle.id);
             formData.append('selected_style_name', selectedStyle.name);
         }
 
-        const data = {};
+        const formDataObject = {};
         for (let [key, value] of formData.entries()) {
-            data[key] = value;
+        formDataObject[key] = value;
         }
 
-        console.log('форма', data);
-
-        if (currentStep === 1 || currentStep === 2) {
+        if (currentStep === 10) {
+            const result = await submitFormData(formData);
+            if (result) {
+                currentStep = 11;
+            } else {
+                return;
+            }
+        } else if (currentStep === 1 || currentStep === 2) {
             currentStep = 3;
-        } else if (currentStep === 10) {
-            currentStep = 11;
         } else {
+
             currentStep++;
         }
+
+
 
         showStep(currentStep);
         updatePagination()
