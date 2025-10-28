@@ -11,6 +11,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const paginationForm = document.querySelector('.pagination-form');
     const currentCounterPagination = document.getElementById('current-counter');
     const totalCounterPagination = document.getElementById('total-counter');
+    const stepsArray = Array.from(steps);
+    const endStepIndex = stepsArray.findIndex(step => step.classList.contains('quiz-step__end'));
+    const lastFormStepIndex = endStepIndex - 1;
+
 
     let currentStep = 0;
     let selectedStyle = null;
@@ -69,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-        if (stepIndex === 0 || stepIndex === 11 ) {
+        if (stepIndex === 0 || stepIndex === endStepIndex ) {
             buttonsFooter.classList.add('hidden');
             paginationForm.classList.add('hidden');
         } else {
@@ -106,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const counterFilledInputs = () => {
         let filledInputs = 0;
 
-        for (let i = 3; i <= 10; i++) {
+        for (let i = 3; i <= lastFormStepIndex; i++) {
             const step = document.querySelector(`.quiz-step[data-step="${i}"]`)
             if (step) {
                 const inputs = step.querySelectorAll('input[type="text"]');
@@ -142,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const counterTotalInputs = () => {
         let totalInputs = 0;
 
-        for (let i = 3; i <= 10; i++) {
+        for (let i = 3; i <= lastFormStepIndex; i++) {
             const step = document.querySelector(`.quiz-step[data-step="${i}"]`)
             if (step) {
                 const inputs = step.querySelectorAll('input[type="text"]');
@@ -171,6 +175,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     const updateNextButton = () => {
+        const isLastIndexForm = currentStep === lastFormStepIndex;
+
         if (currentStep === 1 || currentStep === 2) {
             nextBtn.innerHTML = 'Выбрать стиль<div class="round-arrow"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.7964 0.930089L8.13802 4.27171C8.6245 4.75819 8.28002 5.59102 7.59155 5.59055L1.58413 5.59055C0.709121 5.59008 -0.000445208 6.29965 2.31702e-05 7.17466C0.00049159 8.04966 0.709589 8.75876 1.58413 8.75876L7.59108 8.75829C8.27956 8.75876 8.62403 9.59065 8.13755 10.0771L4.79593 13.4187C6.03322 14.656 8.03913 14.656 9.27689 13.4183L13.2817 9.4135C14.519 8.17621 14.5194 6.16982 13.2821 4.93253L9.27782 0.928213C8.04053 -0.309077 6.03415 -0.309545 4.7964 0.928214L4.7964 0.930089Z" fill="white"/></svg></div>';
 
@@ -179,7 +185,12 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 nextBtn.disabled = true;
             }
-        } else if (currentStep === 0 || currentStep === 11) {
+        } else if (isLastIndexForm) {
+            nextBtn.innerHTML = 'Отправить<div class="round-arrow"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.7964 0.930089L8.13802 4.27171C8.6245 4.75819 8.28002 5.59102 7.59155 5.59055L1.58413 5.59055C0.709121 5.59008 -0.000445208 6.29965 2.31702e-05 7.17466C0.00049159 8.04966 0.709589 8.75876 1.58413 8.75876L7.59108 8.75829C8.27956 8.75876 8.62403 9.59065 8.13755 10.0771L4.79593 13.4187C6.03322 14.656 8.03913 14.656 9.27689 13.4183L13.2817 9.4135C14.519 8.17621 14.5194 6.16982 13.2821 4.93253L9.27782 0.928213C8.04053 -0.309077 6.03415 -0.309545 4.7964 0.928214L4.7964 0.930089Z" fill="white"/></svg></div>';
+
+            const isValid = validateStep(currentStep);
+            nextBtn.disabled = !isValid;
+        } else if (currentStep === 0 || currentStep === endStepIndex) {
             nextBtn.disabled = false;
         } else {
             nextBtn.innerHTML = 'Далее<div class="round-arrow"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.7964 0.930089L8.13802 4.27171C8.6245 4.75819 8.28002 5.59102 7.59155 5.59055L1.58413 5.59055C0.709121 5.59008 -0.000445208 6.29965 2.31702e-05 7.17466C0.00049159 8.04966 0.709589 8.75876 1.58413 8.75876L7.59108 8.75829C8.27956 8.75876 8.62403 9.59065 8.13755 10.0771L4.79593 13.4187C6.03322 14.656 8.03913 14.656 9.27689 13.4183L13.2817 9.4135C14.519 8.17621 14.5194 6.16982 13.2821 4.93253L9.27782 0.928213C8.04053 -0.309077 6.03415 -0.309545 4.7964 0.928214L4.7964 0.930089Z" fill="white"/></svg></div>';
@@ -208,7 +219,8 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             if (response.ok) {
-                console.log(await response.text());
+            alert('Форма отправлена');
+            window.location.href = "/";
                 return true
             } else {
                 console.error(response.status);
@@ -248,7 +260,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 input.style.borderColor = '#f6b715';
             }
 
-            if (currentStep >= 3 && currentStep < 11) {
+            if (currentStep >= 3 && currentStep < endStepIndex) {
                 updateNextButton();
             }
             updatePagination()
@@ -277,10 +289,10 @@ document.addEventListener('DOMContentLoaded', function() {
         formDataObject[key] = value;
         }
 
-        if (currentStep === 10) {
+        if (currentStep === lastFormStepIndex) {
             const result = await submitFormData(formData);
             if (result) {
-                currentStep = 11;
+                currentStep = endStepIndex;
             } else {
                 return;
             }
