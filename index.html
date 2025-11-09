@@ -69,7 +69,7 @@
                     <h2>Выбери стиль:
                     </h2>
                     <div class="questions">
-                        <div class="question-group__buttons">
+                        <div class="question-group__buttons-desctop">
                             <div class="buttons-answers buttons-answers__style-site">
                                 <button type="button" class="button-answer" name="style-site" value="Минимализм"
                                     data-style-id="1">Минимализм</button>
@@ -98,6 +98,31 @@
                                 <button type="button" class="button-answer" name="style-site" value="Бенто"
                                     data-style-id="10">Бенто</button>
                             </div>
+                        </div>
+
+                        <div class="question-group__buttons-mobile">
+
+                            <button type="button" class="button-answer" name="style-site" value="Минимализм"
+                                data-style-id="1">Минимализм</button>
+                            <button type="button" class="button-answer" name="style-site" value="Брутализм и
+                                                            необрутализм" data-style-id="2">Брутализм и
+                                необрутализм</button>
+                            <button type="button" class="button-answer" name="style-site" value="Конструктивизм"
+                                data-style-id="3">Конструктивизм</button>
+                            <button type="button" class="button-answer" name="style-site" value="Швейцарский"
+                                data-style-id="4">Швейцарский</button>
+                            <button type="button" class="button-answer" name="style-site" value="Журнальный"
+                                data-style-id="5">Журнальный</button>
+                            <button type="button" class="button-answer" name="style-site" value="Рисованный"
+                                data-style-id="6">Рисованный</button>
+                            <button type="button" class="button-answer" name="style-site" value="Неоклассический"
+                                data-style-id="7">Неоклассический</button>
+                            <button type="button" class="button-answer" name="style-site" value="Ретро"
+                                data-style-id="8">Ретро</button>
+                            <button type="button" class="button-answer" name="style-site" value="Флэт"
+                                data-style-id="9">Флэт</button>
+                            <button type="button" class="button-answer" name="style-site" value="Бенто"
+                                data-style-id="10">Бенто</button>
                         </div>
                     </div>
                 </section>
@@ -652,12 +677,6 @@
 
                 </section>
 
-                <div class="pagination-form">
-                    <div class="pagination-form__questions-counter">
-                        <span id="current-counter"></span>/<span id="total-counter"></span>Вопросов
-                    </div>
-                </div>
-
                 <div class="buttons-form__footer">
                     <button type="button" id="prevBtn" class="button-round-arrow button-round-arrow-back" hidden>
                         <div class="round-arrow">
@@ -679,7 +698,7 @@
                                     fill="white" />
                             </svg>
                         </div>
-                        Назад к выбору стиля
+                        Вернуться
                     </button>
                     <button type="button" id="showStyleBtn" class="button-round-arrow" hidden>
                         Посмотреть примеры стиля
@@ -703,6 +722,12 @@
                             </svg>
                         </div>
                     </button>
+                </div>
+
+                <div class="pagination-form">
+                    <div class="pagination-form__questions-counter">
+                        <span id="current-counter"></span>/<span id="total-counter"></span>Вопросов
+                    </div>
                 </div>
             </form>
         </div>
